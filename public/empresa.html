@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Empresa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Painel da Empresa</h1>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="agendar.html">Agendar Horário</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="calendar-container">
+            <header class="calendar-header">
+                <button id="prevBtn">&lt;</button>
+                <h2 id="monthYear"></h2>
+                <button id="nextBtn">&gt;</button>
+            </header>
+            <div class="weekdays">
+                <span>Dom</span>
+                <span>Seg</span>
+                <span>Ter</span>
+                <span>Qua</span>
+                <span>Qui</span>
+                <span>Sex</span>
+                <span>Sáb</span>
+            </div>
+            <div class="days-grid" id="daysGrid"></div>
+        </div>
+
+        <div id="appointments-list" class="appointments-card" style="display: none;">
+            <h2>Agendamentos para <span id="selected-date-display"></span></h2>
+            <ul id="appointments-ul">
+                </ul>
+        </div>
+    </main>
+    <script src="empresa-script.js"></script>
+</body>
+</html>

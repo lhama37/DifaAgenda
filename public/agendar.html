@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Horário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DIFA Agenda</h1>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="login.html">Área da Empresa</a>
+        </nav>
+    </header>
+
+    <main class="agendar-main">
+        <h2>Agendar Horário</h2>
+        <form id="booking-form" action="/agendar" method="POST" style="display: none;">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="text" name="date" id="bookingDate" readonly required>
+            <input type="text" name="subject" placeholder="Assunto do agendamento" required>
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+
+        <div class="date-selector-container">
+            <label for="dateSelector">Escolha uma Data:</label>
+            <input type="date" id="dateSelector">
+        </div>
+
+        <div id="availability-slots" style="display: none;">
+            <h3>Horários Disponíveis</h3>
+            <div id="slots-grid"></div>
+        </div>
+    </main>
+    <script src="agendar-script.js"></script>
+</body>
+</html>
